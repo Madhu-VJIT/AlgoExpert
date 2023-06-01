@@ -1,0 +1,9 @@
+def twoNumberSum(array, targetSum):
+    temp = {}
+    for num in array:
+        target = targetSum - num
+        if target in temp:
+            return [target, num]
+        else:
+            temp[num] = True
+    return []
